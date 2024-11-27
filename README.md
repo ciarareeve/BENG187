@@ -35,6 +35,6 @@ This repository is intended to:
 
 | Name              | Email                                 | Role            |
 |-------------------|---------------------------------------|-----------------|
-| Ciara Reeve       | [ciara.reeve@ucsd.edu](mailto:ciara.reeve@ucsd.edu) | Team Member     |
+| Ciara Reeve       | [ciara.reeve@ucsd.edu](mailto:cireeve@ucsd.edu) | Team Member     |
 | Nicholas Hubbard  | [nicholas.hubbard@ucsd.edu](mailto:nhubbard@ucsd.edu) | Team Member     |
 | Dr. Melissa Gymrek |  | Project Mentor  |
