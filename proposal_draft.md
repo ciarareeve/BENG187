@@ -85,8 +85,9 @@ Comparative studies of STRs across species highlight their evolutionary signific
 The primary focus of this project is computational innovation rather than the development of physical devices or proprietary algorithms. Existing platforms like WebSTR are publicly accessible but have significant limitations in their current implementations. While no specific patents restrict the proposed expansions, integrating STR data into GWAS frameworks must respect ethical and data-sharing policies. The reliance on open-source frameworks such as Python and SQLite ensures compliance with community standards while maintaining accessibility for researchers worldwide.
 
 ---
-<div class="comment">### Figures to Include?</div>
-<div class="comment">1. **STR Mutation Mechanisms**
+🚧TODO🚧
+### Figures to Include? 
+1. **STR Mutation Mechanisms**
     - Diagram illustrating mechanisms like strand-slippage replication, unequal crossing over, and retrotransposition, highlighting their contribution to STR variability.
 1. **Current Workflow for STR Analysis --- slides**
     
@@ -99,8 +100,9 @@ The primary focus of this project is computational innovation rather than the de
     - Figure comparing SNP-only GWAS results with GWAS incorporating STR data, demonstrating the added value of STR analysis.
 5. **Comparative Genomics Overview**
     
-    - A comparative plot showing conserved STR loci across humans, mice, and rats to underscore the value of cross-species STR research.</div>
+    - A comparative plot showing conserved STR loci across humans, mice, and rats to underscore the value of cross-species STR research.
 
+---
 
 # Design Goals and Constraints
 
@@ -182,15 +184,18 @@ The following constraints must be addressed to meet the project’s requirements
     - **Real-Time Updates vs. Reliability**: Full real-time data updates could slow performance or cause crashes; near-real-time updates may be a necessary compromise.
     - **Integration vs. Innovation**: Leveraging existing libraries (e.g., FastAPI) prioritizes integration but limits exploration of alternative frameworks.
 
----
 
-<div class="comment">Suggestions for Figures
+---
+🚧TODO🚧
+Suggestions for Figures
 1. Goal Prioritization Chart
     - A bar graph or pie chart showing the relative weightings of functional goals.
 2. Tradeoff Scenarios
     - A table or flowchart depicting how different tradeoff decisions (e.g., speed vs. accuracy) affect outcomes.
 3. Constraint Summary Diagram
-    - A visual summary (e.g., Venn diagram) of constraints categorized by time, resources, and compliance.</div>
+    - A visual summary (e.g., Venn diagram) of constraints categorized by time, resources, and compliance.
+  
+---
 
 # Design Alternatives and Analysis
 
@@ -230,9 +235,10 @@ This alternative involves a complete backend redesign, transitioning to microser
 
 Design 2 is selected as the final design solution. It successfully integrates dynamic visualizations and multi-species capabilities while maintaining compatibility with the existing WebSTR framework. This ensures both immediate usability and scalability for future genomic studies.
 
----
 
-<div class="comment">Suggestions for Figures
+---
+🚧TODO🚧
+Suggestions for Figures
 1. **Multi-Species Data Workflow**
     - A flowchart showing how species-specific data is ingested, annotated via Ensembl API, and presented in the WebSTR interface.
 2. **Species Selection Interface Mockup**
@@ -241,7 +247,7 @@ Design 2 is selected as the final design solution. It successfully integrates dy
     - Example output of Manhattan plots or locus views comparing STR data across species.
 4. **System Architecture Diagram with Species Support**
     - Diagram showing database schema changes and species-specific pipelines.</div>
-
+---
 
 # Design Solution
 
@@ -281,8 +287,10 @@ The enhanced WebSTR web interface will incorporate dynamic visualizations and su
         - Provide examples of cross-species comparisons.
 
 
-
-<div class="comment">1. **Multi-Species Data Workflow**
+---
+🚧TODO🚧
+###**Potential Additions**
+1. **Multi-Species Data Workflow**
     
     - A flowchart showing how species-specific data is ingested, annotated via Ensembl API, and presented in the WebSTR interface.
 2. **Species Selection Interface Mockup**
@@ -293,7 +301,9 @@ The enhanced WebSTR web interface will incorporate dynamic visualizations and su
     - Example output of Manhattan plots or locus views comparing STR data across species.
 4. **System Architecture Diagram with Species Support**
     
-    - Diagram showing database schema changes and species-specific pipelines.</div>
+    - Diagram showing database schema changes and species-specific pipelines.
+
+---
 
 # Parts, Resources, Costs
 
@@ -323,16 +333,23 @@ While software-based, your project requires specific resources for development, 
 | Team Time Allocation          | Dedicated hours for programming, testing, and documentation.                              | N/A                      |
 | Mentor and Expert Feedback    | Guidance on project direction and validation of design choices.                           | N/A                      |
 
-<div class="comment"> **Suggestions for Figures**
+---
+🚧TODO🚧
+**Suggestions for Figures**
 
-**Data Pipeline Workflow**
-    - Visual representation of how STR data and multi-species annotations flow through the system (e.g., raw input -> Ensembl API -> database -> user interface).</div>
+Data Pipeline Workflow
+    - Visual representation of how STR data and multi-species annotations flow through the system (e.g., raw input -> Ensembl API -> database -> user interface).
 ---
 
 # Planning/Scheduling
 
 ![[Pasted image 20241126142839.png]]
-<div class="comment">needs to be replaced with better schematic </div>
+
+---
+🚧TODO🚧
+needs to be replaced with better gantt schematic
+---
+
 #### **Potential Project Bottlenecks**
 
 1. **Database Migration from MariaDB to SQLite**
@@ -413,9 +430,11 @@ The WebSTR project faces several risks across technical, resource, and user-rela
 
 By proactively addressing risks and leveraging the project’s strengths, the WebSTR platform can meet its goals while ensuring usability and robustness.
 
-<div class="comment">
+---
+🚧TODO🚧
 ***Suggestions for Figures**
 
 1. **Risk Mitigation Workflow**: A diagram showing how identified risks are addressed at various stages of the project (e.g., integration, testing, deployment).
 2. **Usability Feedback Loop**: An infographic detailing how user feedback informs iterative design improvements.
-3. **Resource Redundancy Strategy**: A schematic illustrating backup database and computing environments.</div>
+3. **Resource Redundancy Strategy**: A schematic illustrating backup database and computing environments.
+---
