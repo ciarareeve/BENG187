@@ -343,7 +343,7 @@ Data Pipeline Workflow
 
 # Planning/Scheduling
 
-![[Pasted image 20241126142839.png]]
+![](gantt.png)
 
 ---
 🚧TODO🚧
