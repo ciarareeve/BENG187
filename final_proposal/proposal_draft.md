@@ -1,3 +1,39 @@
+# BENG 187 Bioengineering Senior Design  
+## WebSTR: A Population-wide Database of Short Tandem Repeat Variation in Humans  
+
+**Team Members**  
+- Ciara Reeve (cireeve@ucsd.edu)  
+- Nicholas Hubbard (nhubbard@ucsd.edu)  
+
+**GitHub Repository**  
+[https://github.com/ciarareeve/BENG187](https://github.com/ciarareeve/BENG187)  
+
+**Institution**: University of California, San Diego  
+**Department**: Jacobs School of Engineering  
+
+**Date**: November 27, 2024  
+
+---
+
+# Table of Contents  
+
+- [Introduction](#introduction)  
+- [Problem Statement](#problem-statement)  
+- [Specific Aims](#specific-aims)  
+- [Background](#background)  
+  - [Scientific and Technology Background](#scientific-and-technology-background)  
+  - [State of the Art](#state-of-the-art)  
+- [Design Goals and Constraints](#design-goals-and-constraints)  
+  - [Functional Goals](#functional-goals)  
+  - [Constraints](#constraints)  
+- [Design Alternatives and Analysis](#design-alternatives-and-analysis)  
+- [Design Solution](#design-solution)  
+- [Parts, Resources, Costs](#parts-resources-costs)  
+- [Planning/Scheduling](#planningscheduling)  
+- [Risk / Preliminary Assessment](#risk--preliminary-assessment)
+
+---
+
 
 # Introduction
 
