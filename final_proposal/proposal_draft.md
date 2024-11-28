@@ -449,5 +449,5 @@ A3. Team Work Breakdown
 Our team worked hugely collaboratively on each part of these assignments over the quarter, so the following table mainly indicates who took lead on each section as they came along. Also, our design solution wasn't something that was developed for 187B specifically, as the WebSTR project has already been established and worked on by our mentor, Dr. Gymrek.
 |Team Member|Contributions|
 |---|---|
-|Ciara Reeve|Introduction, Design Goals and Constraints, Design Alternatives & Analysis, Planning/Scheduling |
-|Nicholas Hubbard|Background, Parts,Resources, Costs, Risks |
+|Ciara Reeve|Introduction, Design Goals and Constraints, Design Alternatives & Analysis, and Planning/Scheduling |
+|Nicholas Hubbard|Background, Parts, Resources, & Costs, and Risks |
