@@ -293,7 +293,10 @@ While software-based, your project requires specific resources for development, 
 
 # Planning/Scheduling
 
-![](gantt.png)
+## Figure 4: Gantt Chart for Project Timeline
+![Figure 4: Gantt Chart for Project Timeline](gantt_chart.png)
+
+*Figure 4: Gantt chart outlining the project timeline, including key tasks across three phases: problem definition, design, and testing. The chart highlights milestones such as literature review, platform design, STR data integration, accuracy testing, and final adjustments, ensuring timely completion within the academic term.*
 
 #### **Potential Project Bottlenecks**
 
