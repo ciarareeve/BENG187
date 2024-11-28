@@ -68,12 +68,12 @@ The enhanced WebSTR platform will drive advancements in:
 #### Scientific and Technology Background
 
 **Short Tandem Repeats (STRs): Biological Significance**  
-Short Tandem Repeats (STRs) are repetitive DNA sequences, typically 1–6 base pairs in length, constituting about 3% of the human genome. <sup>1</sup> STRs play critical roles in genetic variation, influencing gene expression, protein synthesis, and regulatory mechanisms. Notably, STRs exhibit high mutation rates, ranging from 10−610^{-6} to 10−210^{-2} per generation, far exceeding the 10−910^{-9} mutation rate observed in unique DNA sequences. These elevated rates contribute to frameshift mutations, influencing gene regulation and potentially leading to phenotypic diversity or disease.
+Short Tandem Repeats (STRs) are repetitive DNA sequences, typically 1–6 base pairs in length, constituting about 3% of the human genome.<sup>1</sup> STRs play critical roles in genetic variation, influencing gene expression, protein synthesis, and regulatory mechanisms. Notably, STRs exhibit high mutation rates, ranging from 10−610^{-6} to 10−210^{-2} per generation, far exceeding the 10−910^{-9} mutation rate observed in unique DNA sequences.<sup>2</sup> These elevated rates contribute to frameshift mutations, influencing gene regulation and potentially leading to phenotypic diversity or disease.
 
-STR variability has been implicated in a spectrum of disorders, including Huntington’s disease, which arises from expansions of CAG repeats. The severity and onset of Huntington's disease inversely correlate with repeat length, emphasizing the clinical relevance of STR mutations. Beyond monogenic disorders, STRs influence polygenic traits, as demonstrated in studies linking STRs to blood phenotypes and other complex traits.
+It has been found that tandem repeat polymorphisms (TRPs) can regulate gene expression in healthy individuals. <sup>3</sup>STR variability has been implicated in a spectrum of disorders, including Huntington’s disease, which arises from expansions of CAG repeats.<sup>4 5</sup> The severity and onset of Huntington's disease inversely correlate with repeat length, emphasizing the clinical relevance of STR mutations. Beyond monogenic disorders, STRs influence polygenic traits, as demonstrated in studies linking STRs to blood phenotypes and other complex traits. A second example involving STR-related diseases involves a 2023 study that set out to identify STR-trait associations in 44 blood phenotypes.<sup>6</sup> Researchers found that STRs contribute greatly to complex traits, demonstrating the need for improved understanding of the field.
 
 **STRs in Bioinformatics**  
-Technological advancements have enabled large-scale STR analysis, providing insights into their functional roles. Tools like WebSTR catalog population-wide STR variations, while platforms such as STRetch detect pathogenic expansions. These computational approaches have broadened our understanding of STR-related genetic variation and their contributions to disease.
+Technological advancements have enabled large-scale STR analysis, providing insights into their functional roles. Tools like WebSTR catalog population-wide STR variations, while platforms such as STRetch detect pathogenic expansions.<sup>7 8</sup> These computational approaches have broadened our understanding of STR-related genetic variation and their contributions to disease.
 
 #### State of the Art
 
@@ -84,7 +84,7 @@ Despite their significance, STRs remain underrepresented in genome-wide associat
 Current tools like WebSTR and STRetch are pivotal in advancing STR analysis. WebSTR provides a database for population-wide STR variations, supporting genomic studies by linking STR mutations to phenotypic outcomes. However, these tools are static and limited to human-centric datasets. Expanding WebSTR to include multi-species STR data and integrating STR-trait associations with SNP-based insights are critical next steps in advancing the field. Additionally, the development of dynamic visualization tools, such as Manhattan plots for STR GWAS, will enable researchers to identify complex genetic interactions with unprecedented accuracy.
 
 **Comparative Genomics and Multi-Species STR Research**  
-Comparative studies of STRs across species highlight their evolutionary significance. Cross-species analyses reveal conserved STR loci that play fundamental roles in genome stability, adaptation, and phenotypic expression. These insights not only expand our understanding of STRs in evolutionary biology but also provide translational opportunities for studying human diseases.
+Comparative studies of STRs across species highlight their evolutionary significance. Cross-species analyses reveal conserved STR loci that play fundamental roles in genome stability, adaptation, and phenotypic expression. These insights not only expand our understanding of STRs in evolutionary biology but also provide translational opportunities for studying human diseases.<sup>9 10 11</sup>
 
 #### Patent / Intellectual Property Status
 
@@ -372,3 +372,80 @@ The WebSTR project faces several risks across technical, resource, and user-rela
 4. **Visualization Challenges**: Displaying large datasets efficiently, especially in interactive formats, may strain both client and server resources, potentially impacting performance.
 
 By proactively addressing risks and leveraging the project’s strengths, the WebSTR platform can meet its goals while ensuring usability and robustness.
+
+# Appendices
+
+A1. References
+
+<sup>1</sup> Wyner, N., Barash, M., & McNevin, D. (2020). Forensic Autosomal Short Tandem Repeats and Their Potential Association With Phenotype. Frontiers in genetics, 11, 884. https://doi.org/10.3389/fgene.2020.00884
+
+<sup>2</sup> Fan, H., & Chu, J. Y. (2007). A brief review of short tandem repeat mutation. Genomics, proteomics & bioinformatics, 5(1), 7–14. https://doi.org/10.1016/S1672-0229(07)60009-6
+
+<sup>3</sup> Hannan AJ. Tandem repeats mediating genetic plasticity in health and disease. Nat Rev Genet. 2018 May;19(5):286-298. doi: 10.1038/nrg.2017.115. Epub 2018 Feb 5. PMID: 29398703.
+
+<sup>4</sup> Hong, E. P., Ramos, E. M., Aziz, N. A., Massey, T. H., McAllister, B., Lobanov, S., Jones, L., Holmans, P., Kwak, S., Orth, M., Ciosi, M., Lomeikaite, V., Monckton, D. G., Long, J. D., Lucente, D., Wheeler, V. C., Gillis, T., MacDonald, M. E., Sequeiros, J., . . . Lee, J. (2024). Modification of Huntington’s disease by short tandem repeats. Brain Communications, 6(2). https://doi.org/10.1093/braincomms/fcae016
+
+<sup>5</sup> Huntington’s Disease. (n.d.). National Institute of Neurological Disorders and Stroke. https://www.ninds.nih.gov/health-information/disorders/huntingtons-disease
+
+<sup>6</sup> Margoliash J, Fuchs S, Li Y, Zhang X, Massarat A, Goren A, Gymrek M. Polymorphic short tandem repeats make widespread contributions to blood and serum traits. Cell Genom. 2023 Dec 13;3(12):100458. doi: 10.1016/j.xgen.2023.100458. PMID: 38116119; PMCID: PMC10726533.
+
+<sup>7</sup> Lundström OS, Adriaan Verbiest M, Xia F, Jam HZ, Zlobec I, Anisimova M, Gymrek M. WebSTR: A Population-wide Database of Short Tandem Repeat Variation in Humans. J Mol Biol. 2023 Oct 15;435(20):168260. doi: 10.1016/j.jmb.2023.168260. Epub 2023 Sep 7. PMID: 37678708.
+
+<sup>8</sup> Dashnow H, Lek M, Phipson B, Halman A, Sadedin S, Lonsdale A, Davis M, Lamont P, Clayton JS, Laing NG, MacArthur DG, Oshlack A. STRetch: detecting and discovering pathogenic short tandem repeat expansions. Genome Biol. 2018 Aug 21;19(1):121. doi: 10.1186/s13059-018-1505-2. PMID: 30129428; PMCID: PMC6102892.
+
+<sup>9</sup> Verbiest M, Maksimov M, Jin Y, Anisimova M, Gymrek M, Bilgin Sonay T. Mutation and selection processes regulating short tandem repeats give rise to genetic and phenotypic diversity across species. J Evol Biol. 2023 Feb;36(2):321-336. doi: 10.1111/jeb.14106. Epub 2022 Oct 26. PMID: 36289560; PMCID: PMC9990875.
+
+<sup>10</sup> Lappalainen T, Sammeth M, Friedländer MR, 't Hoen PA, Monlong J, Rivas MA, Gonzàlez-Porta M, Kurbatova N, Griebel T, Ferreira PG, Barann M, Wieland T, Greger L, van Iterson M, Almlöf J, Ribeca P, Pulyakhina I, Esser D, Giger T, Tikhonov A, Sultan M, Bertier G, MacArthur DG, Lek M, Lizano E, Buermans HP, Padioleau I, Schwarzmayr T, Karlberg O, Ongen H, Kilpinen H, Beltran S, Gut M, Kahlem K, Amstislavskiy V, Stegle O, Pirinen M, Montgomery SB, Donnelly P, McCarthy MI, Flicek P, Strom TM; Geuvadis Consortium; Lehrach H, Schreiber S, Sudbrak R, Carracedo A, Antonarakis SE, Häsler R, Syvänen AC, van Ommen GJ, Brazma A, Meitinger T, Rosenstiel P, Guigó R, Gut IG, Estivill X, Dermitzakis ET. Transcriptome and genome sequencing uncovers functional variation in humans. Nature. 2013 Sep 26;501(7468):506-11. doi: 10.1038/nature12531. Epub 2013 Sep 15. PMID: 24037378; PMCID: PMC3918453.
+
+<sup>11</sup> Gymrek M, McGuire AL, Golan D, Halperin E, Erlich Y. Identifying personal genomes by surname inference. Science. 2013 Jan 18;339(6117):321-4. doi: 10.1126/science.1229566. PMID: 23329047.
+
+________________________________________
+
+A2. Interview Summary
+
+INTERVIEW #1: Arya Massarat - PhD Student in Gymrek Lab
+Interview Date: October 24, 2024
+Interviewer: Ciara Reeve
+
+Arya started by emphasizing the importance of foundational skills besides coding, especially for bioinformaticians early in their careers. He spoke about dependency management, version control, and file and project handling organization as part of a vital skillset. From this interview, we learned that understanding data sources and hurdles around processing it are essential to maintaining data integrity in workflows.  This is directly connected to reproducibility which is pivotal in bioinformatics work. When I asked him about troubleshooting, he described a systematic approach.   He starts by hypothesizing possible causes for stalled code or analysis and then tests each scenario. Drop-in debuggers like IPython and assert statements help to identify and resolve issues effectively. He also mentioned the commonplace use of online resources for bioinformaticians, such as Google or ChatGPT to fix coding issues quickly.
+Arya talked alot about looking at the requirements of each project specifically; not one rule can apply to all future projects. For analyses, he often prioritizes thoroughness over speed, whereas in tool development, he aims to optimize for both accuracy and performance. His guiding principle was keeping methods simple when additional complexity does not yield meaningful insights.  When I asked him how he looks at designing workflows, he laid out a clear-cut plan:
+1.	First, define use cases, goals, aims, and objectives 
+2.	Think about inputs and outputs for the method, and identify file formats
+3.	Describe the main algorithm, maybe write pseudocode
+4.	Write tests
+5.	Write code and revise until tests pass
+When we moved on to talking about the importance of STRs in genetic research, he first pointed out their high polymorphism.  This will help address missing heritability in GWAS. He views STRs as a tool which can work alongside SNP-based studies, with the potential to improve disease risk prediction by capturing genetic variation that SNPs alone may miss. Regarding WebSTR's role in advancing personalized medicine, Arya hopes it will enhance clinicians' and researchers' ability to understand STR distributions across populations, which will hopefully improve risk predictions in diverse genetic backgrounds.
+
+________________________________________
+
+INTERVIEW #2: Helyaneh Ziaei Jam - PhD Student in Gymrek Lab and Author of WebSTR
+Interview Date: October 25, 2024
+Interviewer: Ciara Reeve
+
+First, Helyaneh (Helia) discussed the skills she sees as essential in bioinformatics. Some of these skills included a good understanding of Python, C++, bash, Linux and high-performance computing (HPC). These skills are important for handling the large datasets which are common in bioinformatics. Helia talked about the importance of flexibility when working in different computing environments and adjusting analyses as needed. For troubleshooting, she starts by understanding what the code is supposed to do and then looks at specific parts if necessary. When problems are complex, she often uses a smaller dataset to recreate the issue, which makes debugging faster and easier. She finds tools like print statements and breakpoints helpful for tracing issues instead of searching through everything.
+
+When we asked her about how she views balancing speed and accuracy, Helia talked about how she adapts to what each project needs. For projects where speed matters, she focuses on efficiency, but for projects that need high accuracy, she allows more time if necessary. She designs her code to let users control the balance between accuracy and performance, so the tool can be used in different ways depending on the research.  Helia explained that STRs offer unique insights that SNPs don’t, especially for complex traits like neurological disorders. STRs affect things like gene expression and epigenetic changes, making them valuable for more detailed trait analysis in genetic studies. Helia looks at designing workflows in an interesting way. She starts by reviewing existing research and tools to find gaps. She then creates a plan and writes code that aims to increase efficiency and is scalable. User accessibility remains a priority, with intuitive interfaces and documentation designed to facilitate adoption by the wider research community.
+
+As a contributor to WebSTR, Helia emphasized the recent expansion of its database, which now includes over 1.7 million tandem repeats across 3,550 samples from five major superpopulations. This update enables users to explore population-specific variations, advancing personalized medicine by making genetic data accessible and equitable.
+
+________________________________________
+
+INTERVIEW #3: Dr. Melissa Gymrek - Principal Investigator
+Interview Date: October 30, 2024
+Interviewers: Nicholas Hubbard, Ciara Reeve
+
+Dr. Gymrek began by emphasizing traits such as adaptability and self-sufficiency as attractive qualities in bioinformaticians, particularly in the absence of direct guidance. She believes that proficiency in at least one primary programming language, such as Python or R, combined with strong Linux skills and a solid foundation in statistics, prepares bioinformaticians to handle large-scale data analysis and interpret complex results effectively.  We then asked Dr. Gymrek about her approach to troubleshooting. She explained that she begins by going over the main framework to check inputs and outputs, which helps her see the workflow clearly before getting into the details of the code. She pointed out that sometimes debugging is as simple as adding print statements. She also mentioned that people often skip over library documentation, but it usually answers most questions better than general searches.
+
+Dr. Gymrek’s view on balancing computational efficiency and accuracy depends on the project’s goals. She shared that in her lab they have spent years refining code to fully optimize it, only to find that it returns the same result with only minimal improvement. Rather than focusing on small details, she prefers to keep her attention on the larger research questions while staying efficient and accurate.  On the inclusion of STRs in GWAS, Dr. Gymrek discussed how they offer an additional layer of genetic variation not captured by SNPs. STRs can address missing heritability in complex traits, providing a more comprehensive understanding of gene expression and splicing mechanisms that contribute to disease. For tools intended for broad use, she integrates formal testing frameworks to ensure reliability across multiple scenarios.
+
+Dr. Gymrek sees WebSTR being a resource for people such as clinicians or genetic counselors that is accessible and doesnt take extensive bioinformatic knowledge to use. Those in the medical feild benefit from WebSTR because it provides a reference for STR variation across populations therefore supporting personalized medicine. She ended the interview by talking about the importance of having data from diverse populations. Some of the data we use within WebSTR are from 1000 Genomes and H3Africa, which were done to reduce the Eurocentric bias often seen in genetics research. The lab hopes to continue to include more diverse data as it becomes available and ultimately we believe that more labs which value this will make genetic studies more fair and inclusive.
+
+________________________________________
+
+A3. Team Work Breakdown
+
+Our team worked hugely collaboratively on each part of these assignments over the quarter, so the following table mainly indicates who took lead on each section as they came along. Also, our design solution wasn't something that was developed for 187B specifically, as the WebSTR project has already been established and worked on by our mentor, Dr. Gymrek.
+|Team Member|Contributions|
+|---|---|
+|Ciara Reeve|Introduction, Design Goals and Constraints, Design Alternatives & Analysis, Planning/Scheduling |
+|Nicholas Hubbard|Background, Parts,Resources, Costs, Risks |
