@@ -68,7 +68,7 @@ The enhanced WebSTR platform will drive advancements in:
 #### Scientific and Technology Background
 
 **Short Tandem Repeats (STRs): Biological Significance**  
-Short Tandem Repeats (STRs) are repetitive DNA sequences, typically 1–6 base pairs in length, constituting about 3% of the human genome.^1^ STRs play critical roles in genetic variation, influencing gene expression, protein synthesis, and regulatory mechanisms. Notably, STRs exhibit high mutation rates, ranging from 10−610^{-6} to 10−210^{-2} per generation, far exceeding the 10−910^{-9} mutation rate observed in unique DNA sequences. These elevated rates contribute to frameshift mutations, influencing gene regulation and potentially leading to phenotypic diversity or disease.
+Short Tandem Repeats (STRs) are repetitive DNA sequences, typically 1–6 base pairs in length, constituting about 3% of the human genome. <sup>1</sup> STRs play critical roles in genetic variation, influencing gene expression, protein synthesis, and regulatory mechanisms. Notably, STRs exhibit high mutation rates, ranging from 10−610^{-6} to 10−210^{-2} per generation, far exceeding the 10−910^{-9} mutation rate observed in unique DNA sequences. These elevated rates contribute to frameshift mutations, influencing gene regulation and potentially leading to phenotypic diversity or disease.
 
 STR variability has been implicated in a spectrum of disorders, including Huntington’s disease, which arises from expansions of CAG repeats. The severity and onset of Huntington's disease inversely correlate with repeat length, emphasizing the clinical relevance of STR mutations. Beyond monogenic disorders, STRs influence polygenic traits, as demonstrated in studies linking STRs to blood phenotypes and other complex traits.
 
