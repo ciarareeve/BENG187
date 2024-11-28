@@ -18,6 +18,12 @@ This project addresses a critical gap: the lack of a robust platform to dynamica
 
 The WebSTR platform currently lacks interactive visualizations, multi-species capabilities, and integration of fine-mapped STR-trait association data. These limitations impede researchers' ability to fully leverage STRs as complementary tools to SNPs for understanding genetic variation. Key challenges include:
 
+## Figure 1: Current WebSTR Architecture
+![Figure 1: Current WebSTR Architecture](current_webstr.png)
+
+*Figure 1: Current WebSTR architecture highlighting its static visualization tools, human-centric focus, and limited database scalability. This illustrates the limitations of the existing platform, which lacks dynamic visualizations, multi-species support, and efficient data handling.*
+
+
 1. **Dynamic Visualizations**  
     Existing STR visualization tools rely on static plots, limiting researchers' ability to perform in-depth analyses. The project must deliver interactive tools, such as Manhattan and locus-specific regression plots, for real-time exploration.
     
@@ -84,25 +90,6 @@ Comparative studies of STRs across species highlight their evolutionary signific
 
 The primary focus of this project is computational innovation rather than the development of physical devices or proprietary algorithms. Existing platforms like WebSTR are publicly accessible but have significant limitations in their current implementations. While no specific patents restrict the proposed expansions, integrating STR data into GWAS frameworks must respect ethical and data-sharing policies. The reliance on open-source frameworks such as Python and SQLite ensures compliance with community standards while maintaining accessibility for researchers worldwide.
 
----
-🚧TODO🚧
-### Figures to Include? 
-1. **STR Mutation Mechanisms**
-    - Diagram illustrating mechanisms like strand-slippage replication, unequal crossing over, and retrotransposition, highlighting their contribution to STR variability.
-1. **Current Workflow for STR Analysis --- slides**
-    
-    - A schematic of how WebSTR currently handles STR data, emphasizing its limitations (static visualizations, human-centric focus).
-3. **Proposed Enhanced Workflow --- slides**
-    
-    - A workflow diagram showing multi-species integration, interactive visualization capabilities, and STR-trait association analysis.
-4. **STR Applications in GWAS**
-    
-    - Figure comparing SNP-only GWAS results with GWAS incorporating STR data, demonstrating the added value of STR analysis.
-5. **Comparative Genomics Overview**
-    
-    - A comparative plot showing conserved STR loci across humans, mice, and rats to underscore the value of cross-species STR research.
-
----
 
 # Design Goals and Constraints
 
@@ -185,18 +172,6 @@ The following constraints must be addressed to meet the project’s requirements
     - **Integration vs. Innovation**: Leveraging existing libraries (e.g., FastAPI) prioritizes integration but limits exploration of alternative frameworks.
 
 
----
-🚧TODO🚧
-Suggestions for Figures
-1. Goal Prioritization Chart
-    - A bar graph or pie chart showing the relative weightings of functional goals.
-2. Tradeoff Scenarios
-    - A table or flowchart depicting how different tradeoff decisions (e.g., speed vs. accuracy) affect outcomes.
-3. Constraint Summary Diagram
-    - A visual summary (e.g., Venn diagram) of constraints categorized by time, resources, and compliance.
-  
----
-
 # Design Alternatives and Analysis
 
 #### Design Alternatives
@@ -231,27 +206,25 @@ This alternative involves a complete backend redesign, transitioning to microser
 - **Design 3 (Backend Redesign with Species-Focused Infrastructure)** scored 70.25%. Although promising for scalability and long-term performance, the complexity and resources required make it less feasible within the current project timeline.
 - **Design 1 (Standalone Application)** scored 61%. While offering offline capabilities, it is less user-friendly, limits collaboration, and falls short in multi-species integration, which is a critical component of this project.
 
+## Figure 3: Comparison of Current and Planned Architecture
+![Figure 3: Comparison of Current and Planned Architecture](p2_planned_architecture.png)
+
+*Figure 3: Comparison of current and proposed WebSTR architecture, showcasing improvements in scalability, multi-species integration, and visualization tools. This side-by-side comparison highlights the added functionalities of the planned platform.*
+
+
 #### **Decision and Rationale**
 
 Design 2 is selected as the final design solution. It successfully integrates dynamic visualizations and multi-species capabilities while maintaining compatibility with the existing WebSTR framework. This ensures both immediate usability and scalability for future genomic studies.
 
-
----
-🚧TODO🚧
-Suggestions for Figures
-1. **Multi-Species Data Workflow**
-    - A flowchart showing how species-specific data is ingested, annotated via Ensembl API, and presented in the WebSTR interface.
-2. **Species Selection Interface Mockup**
-    - Visual mockups of dropdown menus or tabs for selecting species and toggling between genome builds.
-3. **Comparative Visualization Example**
-    - Example output of Manhattan plots or locus views comparing STR data across species.
-4. **System Architecture Diagram with Species Support**
-    - Diagram showing database schema changes and species-specific pipelines.</div>
----
-
 # Design Solution
 
 The enhanced WebSTR web interface will incorporate dynamic visualizations and support multi-species STR data analysis. By integrating Ensembl API for gene annotations and expanding the database schema to include additional species (e.g., mouse and rat), this solution addresses the needs of researchers exploring STR-trait associations across species. New features, including interactive visualizations, will improve usability while ensuring that the platform remains accessible and collaborative. This design balances innovation, integration, and scalability to meet the evolving demands of genetic research.
+
+## Figure 2: Planned WebSTR Architecture
+![Figure 2: Planned WebSTR Architecture](p1_planned_architecture.png)
+
+*Figure 2: Planned WebSTR architecture featuring modular components, multi-species support, and dynamic visualization capabilities. The enhanced architecture addresses current limitations by incorporating tools such as Manhattan plots, cross-species data integration, and a transition to SQLite.*
+
 
 #### **Breakdown of the Solution into Major Subprojects**
 
@@ -287,24 +260,6 @@ The enhanced WebSTR web interface will incorporate dynamic visualizations and su
         - Provide examples of cross-species comparisons.
 
 
----
-🚧TODO🚧
-###**Potential Additions**
-1. **Multi-Species Data Workflow**
-    
-    - A flowchart showing how species-specific data is ingested, annotated via Ensembl API, and presented in the WebSTR interface.
-2. **Species Selection Interface Mockup**
-    
-    - Visual mockups of dropdown menus or tabs for selecting species and toggling between genome builds.
-3. **Comparative Visualization Example**
-    
-    - Example output of Manhattan plots or locus views comparing STR data across species.
-4. **System Architecture Diagram with Species Support**
-    
-    - Diagram showing database schema changes and species-specific pipelines.
-
----
-
 # Parts, Resources, Costs
 
 #### **Software and Computational Resources**
@@ -333,22 +288,10 @@ While software-based, your project requires specific resources for development, 
 | Team Time Allocation          | Dedicated hours for programming, testing, and documentation.                              | N/A                      |
 | Mentor and Expert Feedback    | Guidance on project direction and validation of design choices.                           | N/A                      |
 
----
-🚧TODO🚧
-**Suggestions for Figures**
-
-Data Pipeline Workflow
-    - Visual representation of how STR data and multi-species annotations flow through the system (e.g., raw input -> Ensembl API -> database -> user interface).
----
 
 # Planning/Scheduling
 
 ![](gantt.png)
-
----
-🚧TODO🚧
-needs to be replaced with better gantt schematic
----
 
 #### **Potential Project Bottlenecks**
 
@@ -429,12 +372,3 @@ The WebSTR project faces several risks across technical, resource, and user-rela
 4. **Visualization Challenges**: Displaying large datasets efficiently, especially in interactive formats, may strain both client and server resources, potentially impacting performance.
 
 By proactively addressing risks and leveraging the project’s strengths, the WebSTR platform can meet its goals while ensuring usability and robustness.
-
----
-🚧TODO🚧
-***Suggestions for Figures**
-
-1. **Risk Mitigation Workflow**: A diagram showing how identified risks are addressed at various stages of the project (e.g., integration, testing, deployment).
-2. **Usability Feedback Loop**: An infographic detailing how user feedback informs iterative design improvements.
-3. **Resource Redundancy Strategy**: A schematic illustrating backup database and computing environments.
----
