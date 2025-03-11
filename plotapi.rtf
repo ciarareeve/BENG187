@@ -1,0 +1,86 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2761
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red183\green111\blue179;\red255\green255\blue255;\red193\green193\blue193;
+\red67\green192\blue160;\red88\green138\blue67;\red141\green212\blue254;\red202\green202\blue202;\red194\green126\blue101;
+\red67\green179\blue255;\red71\green137\blue205;\red212\green213\blue154;\red167\green197\blue151;}
+{\*\expandedcolortbl;;\cssrgb\c77331\c52624\c75301;\cssrgb\c100000\c100000\c100000\c0;\cssrgb\c80088\c80088\c79988;
+\cssrgb\c30610\c78876\c69022;\cssrgb\c41525\c59950\c33208;\cssrgb\c61361\c86489\c99746;\cssrgb\c83229\c83229\c83125;\cssrgb\c80778\c56830\c46925;
+\cssrgb\c31226\c75987\c100000;\cssrgb\c33936\c61427\c84130;\cssrgb\c86261\c86245\c66529;\cssrgb\c71008\c80807\c65805;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 from\cf4 \strokec4  flask \cf2 \strokec2 import\cf4 \strokec4  Flask, request, jsonify\
+\cf2 \strokec2 import\cf4 \strokec4  plotly.express \cf2 \strokec2 as\cf4 \strokec4  \cf5 \strokec5 px\cf4 \strokec4 \
+\cf2 \strokec2 import\cf4 \strokec4  \cf5 \strokec5 pandas\cf4 \strokec4  \cf2 \strokec2 as\cf4 \strokec4  \cf5 \strokec5 pd\cf4 \strokec4 \
+\cf2 \strokec2 import\cf4 \strokec4  numpy \cf2 \strokec2 as\cf4 \strokec4  \cf5 \strokec5 np\cf4 \strokec4 \
+\cf2 \strokec2 import\cf4 \strokec4  \cf5 \strokec5 dash\cf4 \strokec4 \
+\cf2 \strokec2 import\cf4 \strokec4  dash_core_components \cf2 \strokec2 as\cf4 \strokec4  \cf5 \strokec5 dcc\cf4 \strokec4 \
+\cf2 \strokec2 import\cf4 \strokec4  dash_html_components \cf2 \strokec2 as\cf4 \strokec4  \cf5 \strokec5 html\cf4 \strokec4 \
+\cf2 \strokec2 from\cf4 \strokec4  dash.dependencies \cf2 \strokec2 import\cf4 \strokec4  Input, Output\
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Initialize Flask app\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \strokec7 server\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  Flask(\cf7 \strokec7 __name__\cf4 \strokec4 )\
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Initialize Dash app\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \strokec7 app\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 dash\cf4 \strokec4 .Dash(\cf7 \strokec7 __name__\cf4 \strokec4 , \cf7 \strokec7 server\cf8 \strokec8 =\cf7 \strokec7 server\cf4 \strokec4 , \cf7 \strokec7 url_base_pathname\cf8 \strokec8 =\cf9 \strokec9 '/dash/'\cf4 \strokec4 )\
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Placeholder variables for Locus ID and Phenotype\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf10 \strokec10 LOCUS_ID\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf9 \strokec9 "default_locus"\cf4 \strokec4 \
+\cf10 \strokec10 PHENOTYPE\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf9 \strokec9 "default_phenotype"\cf4 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Sample locus data function\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf11 \strokec11 def\cf4 \strokec4  \cf12 \strokec12 generate_locus_data\cf4 \strokec4 (\cf7 \strokec7 locus_id\cf4 \strokec4 , \cf7 \strokec7 phenotype\cf4 \strokec4 ):\
+    \cf7 \strokec7 x\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 np\cf4 \strokec4 .linspace(\cf8 \strokec8 -\cf13 \strokec13 10\cf4 \strokec4 , \cf13 \strokec13 10\cf4 \strokec4 , \cf13 \strokec13 400\cf4 \strokec4 )\
+    \cf7 \strokec7 y\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 np\cf4 \strokec4 .sin(\cf7 \strokec7 x\cf4 \strokec4 ) \cf8 \strokec8 +\cf4 \strokec4  \cf5 \strokec5 np\cf4 \strokec4 .random.normal(\cf13 \strokec13 0\cf4 \strokec4 , \cf13 \strokec13 0.1\cf4 \strokec4 , \cf12 \strokec12 len\cf4 \strokec4 (\cf7 \strokec7 x\cf4 \strokec4 ))\
+    \cf7 \strokec7 df\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 pd\cf4 \strokec4 .\cf5 \strokec5 DataFrame\cf4 \strokec4 (\{\cf9 \strokec9 'Position'\cf4 \strokec4 : \cf7 \strokec7 x\cf4 \strokec4 , \cf9 \strokec9 'Value'\cf4 \strokec4 : \cf7 \strokec7 y\cf4 \strokec4 , \cf9 \strokec9 'Locus ID'\cf4 \strokec4 : \cf7 \strokec7 locus_id\cf4 \strokec4 , \cf9 \strokec9 'Phenotype'\cf4 \strokec4 : \cf7 \strokec7 phenotype\cf4 \strokec4 \})\
+    \cf2 \strokec2 return\cf4 \strokec4  \cf7 \strokec7 df\cf4 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Define API endpoint to update Locus ID and Phenotype\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \strokec12 @\cf7 \strokec7 server\cf12 \strokec12 .route\cf4 \strokec4 (\cf9 \strokec9 "/update_params"\cf4 \strokec4 , \cf7 \strokec7 methods\cf8 \strokec8 =\cf4 \strokec4 [\cf9 \strokec9 "POST"\cf4 \strokec4 ])\
+\pard\pardeftab720\partightenfactor0
+\cf11 \strokec11 def\cf4 \strokec4  \cf12 \strokec12 update_params\cf4 \strokec4 ():\
+    \cf11 \strokec11 global\cf4 \strokec4  \cf10 \strokec10 LOCUS_ID\cf4 \strokec4 , \cf10 \strokec10 PHENOTYPE\cf4 \strokec4 \
+    \cf7 \strokec7 data\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  request.get_json()\
+    \cf10 \strokec10 LOCUS_ID\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf7 \strokec7 data\cf4 \strokec4 .get(\cf9 \strokec9 "locus_id"\cf4 \strokec4 , \cf10 \strokec10 LOCUS_ID\cf4 \strokec4 )\
+    \cf10 \strokec10 PHENOTYPE\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf7 \strokec7 data\cf4 \strokec4 .get(\cf9 \strokec9 "phenotype"\cf4 \strokec4 , \cf10 \strokec10 PHENOTYPE\cf4 \strokec4 )\
+    \cf2 \strokec2 return\cf4 \strokec4  jsonify(\{\cf9 \strokec9 "message"\cf4 \strokec4 : \cf9 \strokec9 "Parameters updated"\cf4 \strokec4 , \cf9 \strokec9 "locus_id"\cf4 \strokec4 : \cf10 \strokec10 LOCUS_ID\cf4 \strokec4 , \cf9 \strokec9 "phenotype"\cf4 \strokec4 : \cf10 \strokec10 PHENOTYPE\cf4 \strokec4 \})\
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Layout for Dash app\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf7 \strokec7 app\cf4 \strokec4 .layout \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 html\cf4 \strokec4 .Div([\
+    \cf5 \strokec5 html\cf4 \strokec4 .H1(\cf9 \strokec9 "Locus Advanced Plot"\cf4 \strokec4 ),\
+    \cf5 \strokec5 dcc\cf4 \strokec4 .Graph(\cf7 \strokec7 id\cf8 \strokec8 =\cf9 \strokec9 'locus-plot'\cf4 \strokec4 ),\
+    \cf5 \strokec5 dcc\cf4 \strokec4 .Interval(\cf7 \strokec7 id\cf8 \strokec8 =\cf9 \strokec9 'interval-update'\cf4 \strokec4 , \cf7 \strokec7 interval\cf8 \strokec8 =\cf13 \strokec13 2000\cf4 \strokec4 , \cf7 \strokec7 n_intervals\cf8 \strokec8 =\cf13 \strokec13 0\cf4 \strokec4 )\
+])\
+\
+\pard\pardeftab720\partightenfactor0
+\cf6 \strokec6 # Callback to update plot\cf4 \strokec4 \
+\pard\pardeftab720\partightenfactor0
+\cf12 \strokec12 @\cf7 \strokec7 app\cf12 \strokec12 .callback\cf4 \strokec4 (\
+    Output(\cf9 \strokec9 'locus-plot'\cf4 \strokec4 , \cf9 \strokec9 'figure'\cf4 \strokec4 ),\
+    Input(\cf9 \strokec9 'interval-update'\cf4 \strokec4 , \cf9 \strokec9 'n_intervals'\cf4 \strokec4 )\
+)\
+\pard\pardeftab720\partightenfactor0
+\cf11 \strokec11 def\cf4 \strokec4  \cf12 \strokec12 update_plot\cf4 \strokec4 (\cf7 \strokec7 n\cf4 \strokec4 ):\
+    \cf7 \strokec7 df\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf12 \strokec12 generate_locus_data\cf4 \strokec4 (\cf10 \strokec10 LOCUS_ID\cf4 \strokec4 , \cf10 \strokec10 PHENOTYPE\cf4 \strokec4 )\
+    \cf7 \strokec7 fig\cf4 \strokec4  \cf8 \strokec8 =\cf4 \strokec4  \cf5 \strokec5 px\cf4 \strokec4 .line(\cf7 \strokec7 df\cf4 \strokec4 , \cf7 \strokec7 x\cf8 \strokec8 =\cf9 \strokec9 'Position'\cf4 \strokec4 , \cf7 \strokec7 y\cf8 \strokec8 =\cf9 \strokec9 'Value'\cf4 \strokec4 , \cf7 \strokec7 title\cf8 \strokec8 =\cf11 \strokec11 f\cf9 \strokec9 'Locus Visualization: \cf11 \strokec11 \{\cf10 \strokec10 LOCUS_ID\cf11 \strokec11 \}\cf9 \strokec9  (\cf11 \strokec11 \{\cf10 \strokec10 PHENOTYPE\cf11 \strokec11 \}\cf9 \strokec9 )'\cf4 \strokec4 )\
+    \cf2 \strokec2 return\cf4 \strokec4  \cf7 \strokec7 fig\cf4 \strokec4 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \strokec2 if\cf4 \strokec4  \cf7 \strokec7 __name__\cf4 \strokec4  \cf8 \strokec8 ==\cf4 \strokec4  \cf9 \strokec9 "__main__"\cf4 \strokec4 :\
+    \cf7 \strokec7 server\cf4 \strokec4 .run(\cf7 \strokec7 debug\cf8 \strokec8 =\cf11 \strokec11 True\cf4 \strokec4 )\
+\
+}
