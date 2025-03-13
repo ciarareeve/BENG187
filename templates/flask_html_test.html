@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test GWAS Plot</title>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js"></script>
+
+</head>
+<body>
+    <h1>GWAS Trait Association for Repeat ID: {{ repeat_id }}</h1>
+    
+    {% if gwas_plot_json %}
+    <div id="gwas-plot"></div>
+    <script>
+        console.log("Raw JSON Data from Flask:", '{{ gwas_plot_json | tojson | safe }}');  // Debugging JSON
+        var plotData = JSON.parse({{ gwas_plot_json | tojson }});
+    
+        console.log("Parsed Plot Data:", plotData);  // Ensure it's valid
+    
+        if (plotData.data.length > 0) {
+            Plotly.newPlot('gwas-plot', plotData.data, plotData.layout);
+        } else {
+            console.error("No data available for Plotly.");
+            document.getElementById('gwas-plot').innerHTML = "<p>No valid data to plot.</p>";
+        }
+    </script>
+    
+    
+    {% else %}
+    <p>No plot available for this repeat_id.</p>
+    {% endif %}
+</body>
+</html>
